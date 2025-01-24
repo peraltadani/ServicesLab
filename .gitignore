@@ -4,3 +4,19 @@
 
 /.vs/ServicesLab/v17
 /.vs
+/src/Services/.vs
+/src/.vs
+/src/bin/Debug
+/src/obj/Debug
+/src/Services/Productos/Productos.Api/bin/Debug/net8.0
+/src/Services/Productos/Productos.Api/obj
+/src/Services/Productos/Productos.Application/bin/Debug/net8.0
+/src/Services/Productos/Productos.Application/obj
+/src/Services/Productos/Productos.DB/bin/Debug
+/src/Services/Productos/Productos.DB/obj/Debug
+/src/Services/Productos/Productos.Domain/bin/Debug/net8.0
+/src/Services/Productos/Productos.Domain/obj
+/src/Services/Productos/Productos.Infraestructure/bin/Debug/net8.0
+/src/Services/Productos/Productos.Infraestructure/obj
+/src/Services/Productos/PRoductos.Presentation/bin/Debug/net8.0
+/src/Services/Productos/PRoductos.Presentation/obj
