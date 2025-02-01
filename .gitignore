@@ -20,3 +20,6 @@
 /src/Services/Productos/Productos.Infraestructure/obj
 /src/Services/Productos/PRoductos.Presentation/bin/Debug/net8.0
 /src/Services/Productos/PRoductos.Presentation/obj
+/src/obj/Docker
+/src/Services/Productos/Productos.Web/obj
+/src/Services/Productos/Productos.Web
