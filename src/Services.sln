@@ -17,11 +17,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External", "External", "{CE
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Productos.Infraestructure", "Services\Productos\Productos.Infraestructure\Productos.Infraestructure.csproj", "{9D4E819A-9977-4589-8B8F-04373911191F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PRoductos.Presentation", "Services\Productos\PRoductos.Presentation\PRoductos.Presentation.csproj", "{CC038C0B-AD8C-473C-A7D3-2106BB63A90F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Productos.Presentation", "Services\Productos\PRoductos.Presentation\Productos.Presentation.csproj", "{CC038C0B-AD8C-473C-A7D3-2106BB63A90F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Productos.Application", "Services\Productos\Productos.Application\Productos.Application.csproj", "{C1AB6C5A-BFE8-4DBD-B330-5E4E8D36CF6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Productos.Application", "Services\Productos\Productos.Application\Productos.Application.csproj", "{C1AB6C5A-BFE8-4DBD-B330-5E4E8D36CF6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Productos.Domain", "Services\Productos\Productos.Domain\Productos.Domain.csproj", "{96B4724E-21BE-4BFE-B191-EFE0DEF95575}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Productos.Domain", "Services\Productos\Productos.Domain\Productos.Domain.csproj", "{96B4724E-21BE-4BFE-B191-EFE0DEF95575}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

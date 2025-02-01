@@ -1,7 +1,7 @@
 networks:
   backend:
 services:
-  productos.db:
+  productosdb:
     container_name: productos-sql-db
     image: mcr.microsoft.com/mssql/server:2022-latest
     ports:
@@ -13,17 +13,17 @@ services:
        - ./Services/Productos/Productos.DB/bin/Debug:/docker-entrypoint-initdb.d
     networks: 
        - backend
-  productos.db.config:
+  productosdb.config:
     container_name: productos-sql-db-config
     image: mcr.microsoft.com/mssql/server:2022-latest
     depends_on:
-       - productos.db
+       - productosdb
     volumes:
        - ./Services/Productos/Productos.DB/bin/Debug:/docker-entrypoint-initdb.d
     networks: 
        - backend
     command: 
-       "bash -c '/opt/mssql-tools18/bin/sqlcmd -C -S productos.db -U sa -P MyPassword*1234 -d master -i /docker-entrypoint-initdb.d/Productos.DB_Create.sql'"
+       "bash -c '/opt/mssql-tools18/bin/sqlcmd -C -S productosdb -U sa -P MyPassword*1234 -d master -i /docker-entrypoint-initdb.d/Productos.DB_Create.sql'"
   productos.api:
     image: ${DOCKER_REGISTRY-}productosapi
     build:
@@ -32,7 +32,7 @@ services:
     networks:
        - backend
     depends_on:
-       - productos.db
+       - productosdb
 
   # productos.db:
   #   image: ${DOCKER_REGISTRY-}productosdb
