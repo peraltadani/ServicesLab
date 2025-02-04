@@ -7,7 +7,7 @@
     <ProjectGuid>944fac51-91b4-4aaa-8f7b-b060286d703c</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
-    <DockerServiceName>productos.api</DockerServiceName>
+    <DockerServiceName>insumos.api</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">

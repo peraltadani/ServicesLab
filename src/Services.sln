@@ -5,23 +5,23 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{944FAC51-91B4-4AAA-8F7B-B060286D703C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Productos.Api", "Services\Productos\Productos.Api\Productos.Api.csproj", "{E804C629-E63A-4C31-AC7C-523C6388DE7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Insumos.Api", "Services\Insumos\Insumos.Api\Insumos.Api.csproj", "{E804C629-E63A-4C31-AC7C-523C6388DE7A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Productos", "Productos", "{BCDA2338-7F1B-467D-B922-2F3B32DFDEFB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Insumos", "Insumos", "{BCDA2338-7F1B-467D-B922-2F3B32DFDEFB}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Productos.DB", "Services\Productos\Productos.DB\Productos.DB.sqlproj", "{F68A610B-B5F3-456F-AC7A-FB60CA47DD39}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Insumos.DB", "Services\Insumos\Insumos.DB\Insumos.DB.sqlproj", "{F68A610B-B5F3-456F-AC7A-FB60CA47DD39}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{1029913F-F4E0-49AA-838E-9325CEC35182}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External", "External", "{CEC9A23E-8989-4144-B653-5488008A97E7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Productos.Infraestructure", "Services\Productos\Productos.Infraestructure\Productos.Infraestructure.csproj", "{9D4E819A-9977-4589-8B8F-04373911191F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Insumos.Infraestructure", "Services\Insumos\Insumos.Infraestructure\Insumos.Infraestructure.csproj", "{9D4E819A-9977-4589-8B8F-04373911191F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Productos.Presentation", "Services\Productos\PRoductos.Presentation\Productos.Presentation.csproj", "{CC038C0B-AD8C-473C-A7D3-2106BB63A90F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Insumos.Presentation", "Services\Insumos\Insumos.Presentation\Insumos.Presentation.csproj", "{CC038C0B-AD8C-473C-A7D3-2106BB63A90F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Productos.Application", "Services\Productos\Productos.Application\Productos.Application.csproj", "{C1AB6C5A-BFE8-4DBD-B330-5E4E8D36CF6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Insumos.Application", "Services\Insumos\Insumos.Application\Insumos.Application.csproj", "{C1AB6C5A-BFE8-4DBD-B330-5E4E8D36CF6A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Productos.Domain", "Services\Productos\Productos.Domain\Productos.Domain.csproj", "{96B4724E-21BE-4BFE-B191-EFE0DEF95575}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Insumos.Domain", "Services\Insumos\Insumos.Domain\Insumos.Domain.csproj", "{96B4724E-21BE-4BFE-B191-EFE0DEF95575}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

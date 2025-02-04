@@ -1,8 +1,8 @@
 networks:
   backend:
 services:
-  productosdb:
-    container_name: productos-sql-db
+  insumosdb:
+    container_name: insumos-sql-db
     image: mcr.microsoft.com/mssql/server:2022-latest
     ports:
        - 8006:1433
@@ -10,32 +10,27 @@ services:
        - ACCEPT_EULA=Y
        - MSSQL_SA_PASSWORD=MyPassword*1234
     volumes:
-       - ./Services/Productos/Productos.DB/bin/Debug:/docker-entrypoint-initdb.d
+       - ./Services/Insumos/Insumos.DB/bin/Debug:/docker-entrypoint-initdb.d
     networks: 
        - backend
-  productosdb.config:
-    container_name: productos-sql-db-config
+  insumosdb.config:
+    container_name: insumos-sql-db-config
     image: mcr.microsoft.com/mssql/server:2022-latest
     depends_on:
-       - productosdb
+       - insumosdb
     volumes:
-       - ./Services/Productos/Productos.DB/bin/Debug:/docker-entrypoint-initdb.d
+       - ./Services/Insumos/Insumos.DB/bin/Debug:/docker-entrypoint-initdb.d
     networks: 
        - backend
     command: 
-       "bash -c '/opt/mssql-tools18/bin/sqlcmd -C -S productosdb -U sa -P MyPassword*1234 -d master -i /docker-entrypoint-initdb.d/Productos.DB_Create.sql'"
-  productos.api:
-    image: ${DOCKER_REGISTRY-}productosapi
+       "bash -c '/opt/mssql-tools18/bin/sqlcmd -C -S insumosdb -U sa -P MyPassword*1234 -d master -i /docker-entrypoint-initdb.d/Insumos.DB_Create.sql'"
+  insumos.api:
+    image: ${DOCKER_REGISTRY-}insumosapi
     build:
       context: .
-      dockerfile: Services/Productos/Productos.Api/Dockerfile
+      dockerfile: Services/Insumos/Insumos.Api/Dockerfile
     networks:
        - backend
     depends_on:
-       - productosdb
+       - insumosdb
 
-  # productos.db:
-  #   image: ${DOCKER_REGISTRY-}productosdb
-  #   build:
-  #     context: .
-  #     dockerfile: Services/Productos/Productos.DB.Build/Dockerfile
