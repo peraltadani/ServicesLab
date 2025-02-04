@@ -25,3 +25,16 @@
 /src/Services/Productos/Productos.Web
 /src/Services/Productos/Productos.DB/Productos.DB.dbmdl
 /src/Services/Productos/Productos.DB/Productos.DB.jfm
+/src/Services/Insumos/Insumos.Api/bin/Debug/net8.0
+/src/Services/Insumos/Insumos.Api/obj
+/src/Services/Insumos/Insumos.Application/bin/Debug/net8.0
+/src/Services/Insumos/Insumos.Application/obj
+/src/Services/Insumos/Insumos.DB/bin/Debug
+/src/Services/Insumos/Insumos.DB/obj/Debug
+/src/Services/Insumos/Insumos.Domain/bin/Debug/net8.0
+/src/Services/Insumos/Insumos.Domain/obj
+/src/Services/Insumos/Insumos.Domain/Primitives/Entity.cs
+/src/Services/Insumos/Insumos.Infraestructure/bin/Debug/net8.0
+/src/Services/Insumos/Insumos.Infraestructure/obj
+/src/Services/Insumos/Insumos.Presentation/bin/Debug/net8.0
+/src/Services/Insumos/Insumos.Presentation/obj
