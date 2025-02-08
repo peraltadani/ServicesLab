@@ -21,7 +21,7 @@ internal sealed class CreateInsumoCommandHandler : ICommandHandler<CreateInsumoC
 
     public async Task<int> Handle(CreateInsumoCommand request, CancellationToken cancellationToken)
     {
-        var insumo = new Insumo(request.SubConceptoId, request.Descripcion, request.UnidadMedidaId, request.FechaAlta, request.Valuacion);
+        var insumo = new Insumo(request.SubConceptoId, request.Descripcion, request.UnidadMedidaId, request.FechaAlta, request.UltimoPrecioCompra);
 
         _insumoRepository.Insert(insumo);
 

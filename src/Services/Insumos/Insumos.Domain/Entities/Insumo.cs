@@ -8,13 +8,13 @@ namespace Insumos.Domain.Entities
 {
     public class Insumo
     {
-        public Insumo(int? subConceptoId, string descripcion, int unidadMedidaId, DateTime fechaAlta, decimal? valuacion)
+        public Insumo(int? subConceptoId, string descripcion, int unidadMedidaId, DateTime fechaAlta, decimal? ultimoPrecioCompra)
         {
             SubConceptoId = subConceptoId;
             Descripcion = descripcion;
             UnidadMedidaId = unidadMedidaId;
             FechaAlta = fechaAlta;
-            Valuacion = valuacion;
+            UltimoPrecioCompra = ultimoPrecioCompra;
         }
 
         public int InsumoId { get; set; }
@@ -29,7 +29,7 @@ namespace Insumos.Domain.Entities
 
         public DateTime? FechaBaja { get; set; }
 
-        public decimal? Valuacion { get; set; }
+        public decimal? UltimoPrecioCompra { get; set; }
 
     }
 }
