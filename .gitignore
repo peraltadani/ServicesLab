@@ -42,3 +42,5 @@
 /src/Services/Insumos/Insumos.DB/Insumos.DB.jfm
 /src/Services/Gateway/Gateway.API/bin/Debug/net8.0
 /src/Services/Gateway/Gateway.API/obj
+/src/Services/Gateway/bin/Debug/net8.0
+/src/Services/Gateway/obj
