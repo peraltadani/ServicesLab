@@ -23,6 +23,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Insumos.Application", "Serv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Insumos.Domain", "Services\Insumos\Insumos.Domain\Insumos.Domain.csproj", "{96B4724E-21BE-4BFE-B191-EFE0DEF95575}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{0B3BF2BE-B061-4148-A2FD-F30B54266D67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gateway.Api", "Services\Gateway\Gateway.API\Gateway.Api.csproj", "{371FDC34-9203-4E90-9511-93443A561F11}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +63,10 @@ Global
 		{96B4724E-21BE-4BFE-B191-EFE0DEF95575}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96B4724E-21BE-4BFE-B191-EFE0DEF95575}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96B4724E-21BE-4BFE-B191-EFE0DEF95575}.Release|Any CPU.Build.0 = Release|Any CPU
+		{371FDC34-9203-4E90-9511-93443A561F11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{371FDC34-9203-4E90-9511-93443A561F11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{371FDC34-9203-4E90-9511-93443A561F11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{371FDC34-9203-4E90-9511-93443A561F11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,6 +80,7 @@ Global
 		{CC038C0B-AD8C-473C-A7D3-2106BB63A90F} = {CEC9A23E-8989-4144-B653-5488008A97E7}
 		{C1AB6C5A-BFE8-4DBD-B330-5E4E8D36CF6A} = {1029913F-F4E0-49AA-838E-9325CEC35182}
 		{96B4724E-21BE-4BFE-B191-EFE0DEF95575} = {1029913F-F4E0-49AA-838E-9325CEC35182}
+		{371FDC34-9203-4E90-9511-93443A561F11} = {0B3BF2BE-B061-4148-A2FD-F30B54266D67}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {30E06B55-952A-4A7F-84C0-5C4B40474936}

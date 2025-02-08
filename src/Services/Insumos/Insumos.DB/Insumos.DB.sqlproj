@@ -68,6 +68,8 @@
     <Build Include="dbo\Tables\SubConcepto.sql" />
     <Build Include="dbo\Tables\Insumo.sql" />
     <Build Include="dbo\Tables\Concepto.sql" />
+    <Build Include="dbo\Tables\Stock.sql" />
+    <Build Include="dbo\Tables\Deposito.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="dbo\Script.PostDeployment.Data.sql" />

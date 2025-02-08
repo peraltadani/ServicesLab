@@ -1,6 +1,16 @@
 networks:
   backend:
 services:
+  gateway.api:
+    image: ${DOCKER_REGISTRY-}gatewayapi
+    build:
+      context: .
+      dockerfile: Services/Gateway/Gateway.API/Dockerfile
+    ports:
+       - 5000:5000
+       - 5001:5001
+    networks: 
+       - backend
   insumosdb:
     container_name: insumos-sql-db
     image: mcr.microsoft.com/mssql/server:2022-latest
@@ -29,8 +39,22 @@ services:
     build:
       context: .
       dockerfile: Services/Insumos/Insumos.Api/Dockerfile
+    ports:
+       - 5100:5100
+       - 5101:5101
+    hostname: insumos.api
     networks:
        - backend
     depends_on:
        - insumosdb
+  catalog-db:
+    image: mongo
+    environment:
+      # MONGO_INITDB_ROOT_USERNAME: root
+      # MONGO_INITDB_ROOT_PASSWORD: todo
+      MONGO_INITDB_DATABASE: catalog
+    ports:
+      - '27017:27017'
 
+
+ 
