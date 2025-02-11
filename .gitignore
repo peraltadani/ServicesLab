@@ -44,3 +44,7 @@
 /src/Services/Gateway/Gateway.API/obj
 /src/Services/Gateway/bin/Debug/net8.0
 /src/Services/Gateway/obj
+/src/Services/Ventas/Ventas.Domain/bin/Debug/net8.0
+/src/Services/Ventas/Ventas.Domain/obj
+/src/Services/Ventas/Ventas.Infraestructure/bin/Debug/net8.0
+/src/Services/Ventas/Ventas.Infraestructure/obj
