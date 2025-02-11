@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Insumos.Domain.Abstractions;
+using Ventas.Domain.Abstractions;
 
-namespace Insumos.Infraestructure;
+namespace Ventas.Infraestructure;
 
 public sealed class ApplicationDbContext : DbContext, IUnitOfWork
 {

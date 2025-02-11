@@ -6,10 +6,10 @@ using FluentValidation;
 using Insumos.Domain.Abstractions;
 using System.Data;
 using Microsoft.EntityFrameworkCore;
-using Insumos.Infrastructure;
-using Insumos.Infrastructure.Repositories;
 using Microsoft.Extensions.Configuration;
 using Insumos.Api.Middleware;
+using Insumos.Infraestructure.Repositories;
+using Insumos.Infraestructure;
 
 
 var builder = WebApplication.CreateBuilder(args);

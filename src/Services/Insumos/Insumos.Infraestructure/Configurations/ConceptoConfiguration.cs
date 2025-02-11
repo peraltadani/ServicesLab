@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Insumos.Domain.Entities;
 
-namespace Insumos.Infrastructure.Configurations;
+namespace Insumos.Infraestructure.Configurations;
 
 internal sealed class ConceptoConfiguration : IEntityTypeConfiguration<Concepto>
 {

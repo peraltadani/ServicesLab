@@ -1,7 +1,7 @@
 ﻿using Insumos.Domain.Abstractions;
 using Insumos.Domain.Entities;
 
-namespace Insumos.Infrastructure.Repositories;
+namespace Insumos.Infraestructure.Repositories;
 
 public sealed class InsumoRepository : IInsumoRepository
 {

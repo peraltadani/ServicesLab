@@ -1,4 +1,4 @@
-﻿namespace Insumos.Infraestructure;
+﻿namespace Ventas.Infraestructure;
 
 public static class AssemblyReference
 {
