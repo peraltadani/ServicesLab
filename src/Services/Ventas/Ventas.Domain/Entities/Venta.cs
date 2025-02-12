@@ -8,6 +8,14 @@ namespace Ventas.Domain.Entities
 {
     public class Venta
     {
+
+        public Venta(DateTime fechaVenta, int clienteId, int estadoVentaId)
+        {
+            FechaVenta = fechaVenta;
+            ClienteId = clienteId;
+            EstadoVentaId = estadoVentaId;
+        }
+
         public int VentaId { get; set; }
 
         public DateTime FechaVenta { get; set; }
