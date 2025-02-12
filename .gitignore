@@ -48,3 +48,5 @@
 /src/Services/Ventas/Ventas.Domain/obj
 /src/Services/Ventas/Ventas.Infraestructure/bin/Debug/net8.0
 /src/Services/Ventas/Ventas.Infraestructure/obj
+/src/Services/Ventas/Ventas.Application/obj
+/src/Services/Ventas/Ventas.Application/bin/Debug/net8.0
