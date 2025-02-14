@@ -58,3 +58,10 @@ services:
 
 
  
+
+  ventas.api:
+    image: ${DOCKER_REGISTRY-}ventasapi
+    build:
+      context: .
+      dockerfile: Services/Ventas/Ventas.Api/Dockerfile
+

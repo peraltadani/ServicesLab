@@ -1,11 +1,8 @@
 ﻿using Dapper;
 using System.Data;
-using System.Threading;
-using System.Threading.Tasks;
 using Ventas.Application.Abstractions.Messaging;
-using Ventas.Application.Ventas.Queries.GetConceptos;
 
-namespace Ventas.Application.Ventas.Queries.GetConceptos;
+namespace Ventas.Application.Ventas.Queries.GetVentas;
 
 internal sealed class GetVentasQueryHandler : IQueryHandler<GetVentasQuery, IEnumerable<VentasResponse>>
 {

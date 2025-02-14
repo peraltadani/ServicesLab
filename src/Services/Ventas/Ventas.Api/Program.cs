@@ -1,26 +1,26 @@
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
-using Insumos.Application.Behaviors;
+using Ventas.Application.Behaviors;
 using FluentValidation;
-using Insumos.Domain.Abstractions;
+using Ventas.Domain.Abstractions;
 using System.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using Insumos.Api.Middleware;
-using Insumos.Infraestructure.Repositories;
-using Insumos.Infraestructure;
+using Ventas.Api.Middleware;
+using Ventas.Infraestructure.Repositories;
+using Ventas.Infraestructure;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-var presentationAssembly = typeof(Insumos.Presentation.AssemblyReference).Assembly;
+var presentationAssembly = typeof(Ventas.Presentation.AssemblyReference).Assembly;
 
 builder.Services.AddControllers().AddApplicationPart(presentationAssembly);
 
-var applicationAssembly = typeof(Insumos.Application.AssemblyReference).Assembly;
+var applicationAssembly = typeof(Ventas.Application.AssemblyReference).Assembly;
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -47,8 +47,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ApplicationDbContext>(b =>
       b.UseSqlServer(builder.Configuration.GetConnectionString("Application")));
 
-builder.Services.AddScoped<IConceptoRepository, ConceptoRepository>();
-builder.Services.AddScoped<IInsumoRepository, InsumoRepository>();
+builder.Services.AddScoped<IVentaRepository, VentaRepository>();
+builder.Services.AddScoped<IDetalleVentaRepository, DetalleVentaRepository>();
 
 builder.Services.AddScoped<IUnitOfWork>(
     factory => factory.GetRequiredService<ApplicationDbContext>());
