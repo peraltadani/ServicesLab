@@ -50,3 +50,9 @@
 /src/Services/Ventas/Ventas.Infraestructure/obj
 /src/Services/Ventas/Ventas.Application/obj
 /src/Services/Ventas/Ventas.Application/bin/Debug/net8.0
+/src/Services/Ventas/Ventas.Api/bin/Debug/net8.0
+/src/Services/Ventas/Ventas.Api/obj
+/src/Services/Ventas/Ventas.DB/bin/Debug
+/src/Services/Ventas/Ventas.DB/obj/Debug
+/src/Services/Ventas/Ventas.Presentation/bin/Debug/net8.0
+/src/Services/Ventas/Ventas.Presentation/obj
