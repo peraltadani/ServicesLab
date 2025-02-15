@@ -47,6 +47,42 @@ services:
        - backend
     depends_on:
        - insumosdb
+  ventasdb:
+    container_name: ventas-sql-db
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    ports:
+       - 8007:1433
+    environment:
+       - ACCEPT_EULA=Y
+       - MSSQL_SA_PASSWORD=MyPassword*1234
+    volumes:
+       - ./Services/Ventas/Ventas.DB/bin/Debug:/docker-entrypoint-initdb.d
+    networks: 
+       - backend
+  ventasdb.config:
+    container_name: ventas-sql-db-config
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    depends_on:
+       - ventasdb
+    volumes:
+       - ./Services/Ventas/Ventas.DB/bin/Debug:/docker-entrypoint-initdb.d
+    networks: 
+       - backend
+    command: 
+       "bash -c '/opt/mssql-tools18/bin/sqlcmd -C -S ventasdb -U sa -P MyPassword*1234 -d master -i /docker-entrypoint-initdb.d/Ventas.DB_Create.sql'"
+  ventas.api:
+    image: ${DOCKER_REGISTRY-}ventasapi
+    build:
+      context: .
+      dockerfile: Services/Ventas/Ventas.Api/Dockerfile
+    ports:
+       - 5200:5200
+       - 5201:5201
+    hostname: ventas.api
+    networks:
+       - backend
+    depends_on:
+       - ventasdb
   catalog-db:
     image: mongo
     environment:
@@ -55,13 +91,16 @@ services:
       MONGO_INITDB_DATABASE: catalog
     ports:
       - '27017:27017'
+  rabbitmq:
+    image: rabbitmq:management-alpine
+    environment:
+      - todo
+    expose:
+      - "5672"
+    ports:
+      - 8012:15672
 
 
  
 
-  ventas.api:
-    image: ${DOCKER_REGISTRY-}ventasapi
-    build:
-      context: .
-      dockerfile: Services/Ventas/Ventas.Api/Dockerfile
 

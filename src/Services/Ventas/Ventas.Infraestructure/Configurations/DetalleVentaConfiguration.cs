@@ -12,8 +12,6 @@ internal sealed class DetalleVentaConfiguration : IEntityTypeConfiguration<Detal
 
         builder.HasKey(detalleVenta => detalleVenta.DetalleVentaId);
 
-        builder.Property(detalleVenta => detalleVenta.VentaId).IsRequired();
-
         builder.Property(detalleVenta => detalleVenta.InsumoId).IsRequired();
 
         builder.Property(detalleVenta => detalleVenta.Cantidad).IsRequired();

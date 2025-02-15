@@ -18,18 +18,34 @@ internal sealed class CreateVentaCommandHandler : ICommandHandler<CreateVentaCom
 
     public async Task<int> Handle(CreateVentaCommand request, CancellationToken cancellationToken)
     {
+
         var venta = new Venta(request.FechaVenta, request.ClienteId, request.EstadoVentaId);
+        
+        using var transaction = _unitOfWork.BeginTransaction(cancellationToken);
 
-        _ventaRepository.Insert(venta);
-
-        foreach(var detalle in request.Detalle)
+        try
         {
-            detalle.VentaId = venta.VentaId;
+            _ventaRepository.Insert(venta);
 
-            _detalleVentaRepository.Insert(detalle);
+            await _unitOfWork.SaveChangesAsync(cancellationToken);
+
+            foreach(var detalle in request.Detalle)
+            {
+                detalle.VentaId = venta.VentaId;
+
+                _detalleVentaRepository.Insert(detalle);
+            }
+
+            await _unitOfWork.SaveChangesAsync(cancellationToken);
+
+            transaction.Commit();
         }
+        catch (Exception)
+        {
+            transaction.Rollback();
 
-        await _unitOfWork.SaveChangesAsync(cancellationToken);
+            throw;
+        }     
 
         return venta.VentaId;
     }

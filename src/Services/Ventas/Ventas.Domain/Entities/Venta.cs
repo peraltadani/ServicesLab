@@ -24,6 +24,8 @@ namespace Ventas.Domain.Entities
 
         public int ClienteId { get; set; }
 
+        public IEnumerable<DetalleVenta> Detalle { get; set; }
+
     }
 
 }

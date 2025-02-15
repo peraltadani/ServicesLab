@@ -14,7 +14,7 @@ namespace Ventas.Domain.Entities
 
         public int InsumoId { get; set; }
 
-        public decimal Cantidad { get; set; }
+        public decimal Cantidad { get; set; } 
 
     }
 }
