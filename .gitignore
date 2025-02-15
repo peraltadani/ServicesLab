@@ -56,3 +56,5 @@
 /src/Services/Ventas/Ventas.DB/obj/Debug
 /src/Services/Ventas/Ventas.Presentation/bin/Debug/net8.0
 /src/Services/Ventas/Ventas.Presentation/obj
+*.dbmdl
+*.jfm
